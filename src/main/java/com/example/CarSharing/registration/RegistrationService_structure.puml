@@ -1,0 +1,208 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "com.example.CarSharing.registration.RegistrationService",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1322970774 { 
+   	label=example
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1888283252 { 
+   	label=CarSharing
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   AppUserService11342953[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)AppUserService</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   appUserRepository: AppUserRepository [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   bCryptPasswordEncoder: BCryptPasswordEncoder [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   confirmationTokenService: ConfirmationTokenService [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ enableAppUser(email: String): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ loadUserByUsername(email: String): UserDetails</TD></TR>
+<TR><TD ALIGN="LEFT" >+ signUpUser(appUser: AppUser): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ConfirmationTokenService1979413881[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ConfirmationTokenService</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   confirmationTokenRepository: ConfirmationTokenRepository [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ getToken(token: String): Optional&lt;ConfirmationToken&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ saveConfirmationToken(token: ConfirmationToken)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ setConfirmedAt(token: String): int</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+EmailService1754575737[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)EmailService</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   mailSender: JavaMailSender [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ send(to: String, email: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+EmailValidator110159506[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)EmailValidator</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ test(s: String): boolean</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+RegistrationController110159506[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)RegistrationController</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   registrationService: RegistrationService [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ confirm(token: String): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ register(request: RegistrationRequest): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+RegistrationService110159506[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)RegistrationService</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   appUserService: AppUserService [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   confirmationTokenService: ConfirmationTokenService [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   emailSender: EmailSender [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   emailValidator: EmailValidator [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- buildEmail(name: String, link: String): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ confirmToken(token: String): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ register(request: RegistrationRequest): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+AppUserService11342953 -> ConfirmationTokenService1979413881[label="confirmationTokenService
+[0..1]"];
+RegistrationController110159506 -> RegistrationService110159506[label="registrationService
+[0..1]"];
+RegistrationService110159506 -> AppUserService11342953[label="appUserService
+[0..1]"];
+RegistrationService110159506 -> ConfirmationTokenService1979413881[label="confirmationTokenService
+[0..1]"];
+RegistrationService110159506 -> EmailService1754575737[arrowhead=none];
+RegistrationService110159506 -> EmailValidator110159506[label="emailValidator
+[0..1]"];
+    
+}
+@enduml
