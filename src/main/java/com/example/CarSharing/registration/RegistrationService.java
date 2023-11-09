@@ -1,5 +1,4 @@
 package com.example.CarSharing.registration;
-
 import com.example.CarSharing.AppUser.AppUser;
 import com.example.CarSharing.AppUser.AppUserRole;
 import com.example.CarSharing.AppUser.AppUserService;
@@ -7,7 +6,10 @@ import com.example.CarSharing.email.EmailSender;
 import com.example.CarSharing.registration.token.ConfirmationToken;
 import com.example.CarSharing.registration.token.ConfirmationTokenService;
 import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
@@ -43,6 +45,9 @@ public class RegistrationService {
                 buildEmail(request.getFirstName(), link));
         return token;
     }
+
+
+
     @Transactional
     public String confirmToken(String token) {
         ConfirmationToken confirmationToken = confirmationTokenService
