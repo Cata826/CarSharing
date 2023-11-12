@@ -1,5 +1,4 @@
 package com.example.CarSharing.AppUser;
-
 import com.example.CarSharing.registration.token.ConfirmationToken;
 import com.example.CarSharing.registration.token.ConfirmationTokenService;
 import lombok.AllArgsConstructor;

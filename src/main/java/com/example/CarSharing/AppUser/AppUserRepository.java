@@ -15,11 +15,17 @@ public interface AppUserRepository
     Optional<AppUser> findByEmail(String email);
     Optional<AppUser> findById(Long id);
 
+    @Query("SELECT u FROM AppUser u WHERE u.email = ?1 AND u.password = ?2")
+    Optional<AppUser> findByEmailAndPassword(String email, String password);
+
+
 
     @Transactional
     @Modifying
     @Query("UPDATE AppUser a " +
             "SET a.enabled = TRUE WHERE a.email = ?1")
     int enableAppUser(String email);
+
+
 
 }

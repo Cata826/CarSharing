@@ -1,5 +1,4 @@
 package com.example.CarSharing.AppUser;
-
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,7 +6,6 @@ import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
@@ -33,23 +31,62 @@ public class AppUser implements UserDetails {
     private String lastname;
     private String email;
     private String password;
+
+    private int year;
+    private int month;
+    private int day;
     @Enumerated(EnumType.STRING)
     private AppUserRole appUserRole;
     private Boolean locked=false;
     private Boolean enabled=true;
 
-    public AppUser(String firstname,
-                   String lastname,
+    public AppUser(
+//                   String firstname,
+//                   String lastname,
                    String email,
                    String password,
                    AppUserRole appUserRole
                    ) {
-        this.firstname = firstname;
-        this.lastname = lastname;
+//        this.firstname = firstname;
+//        this.lastname = lastname;
         this.email = email;
         this.password = password;
         this.appUserRole = appUserRole;
 
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
     }
 
     @Override
@@ -73,6 +110,18 @@ public class AppUser implements UserDetails {
     }
     public String getLastName() {
         return lastname;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public int getDay() {
+        return day;
     }
 
     @Override
