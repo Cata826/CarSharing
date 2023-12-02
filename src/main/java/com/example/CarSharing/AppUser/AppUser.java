@@ -32,13 +32,24 @@ public class AppUser implements UserDetails {
     private String email;
     private String password;
 
+    private String phone_number;
+
     private int year;
+    public void setPhone_number(String phone_number) {
+        this.phone_number = phone_number;
+    }
+
     private int month;
+
     private int day;
+
+    public String getPhone_number() {
+        return phone_number;
+    }
     @Enumerated(EnumType.STRING)
     private AppUserRole appUserRole;
     private Boolean locked=false;
-    private Boolean enabled=true;
+    private Boolean enabled=false;
 
     public AppUser(
 //                   String firstname,
