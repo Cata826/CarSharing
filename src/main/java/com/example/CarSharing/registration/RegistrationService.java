@@ -18,7 +18,7 @@ public class RegistrationService {
     private final EmailSender emailSender;
 
     public String register(RegistrationRequest request) {
-
+        System.out.println("Received registration request: " + request);
         boolean isValidEmail = emailValidator.test(request.getEmail());
         if(!isValidEmail)
         {
@@ -26,8 +26,6 @@ public class RegistrationService {
         }
         String token = appUserService.signUpUser(
                 new AppUser(
-//                        request.getFirstName(),
-//                        request.getLastName(),
                         request.getEmail(),
                         request.getPassword(),
                         AppUserRole.USER

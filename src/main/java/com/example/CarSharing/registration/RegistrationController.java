@@ -34,13 +34,38 @@ public class RegistrationController {
 
         return registrationService.register(request);
     }
+    @GetMapping("/users/{id}/enabled")
+    public ResponseEntity<Boolean> isUserEnabled(@PathVariable Long id) {
+        Optional<AppUser> optionalUser = appUserRepository.findById(id);
+
+        if (optionalUser.isPresent()) {
+            AppUser user = optionalUser.get();
+            return ResponseEntity.ok(user.isEnabled());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 
     @PostMapping("/createride")
     public String registerRide(@RequestBody RegistrationRequest request) {
         // Assuming RegistrationRequest contains origin, destination, distance, and time
-        return appRideService.insertAppRide(request.getOrigin(), request.getDestination(),
-                request.getDistance(), request.getTime());
+        return appRideService.insertAppRide(request.getUser_id(), request.getUser_passanger(), request.getOrigin(), request.getDestination(),
+                request.getDistance(), request.getTime(),request.getNumber_seats(),request.getData());
     }
+
+    @GetMapping("/searchride")
+    public List<AppRide> searchRides(
+            @RequestParam String origin,
+            @RequestParam String destination,
+            @RequestParam String data
+
+
+    ) {
+        // Assuming you have a method in AppRideService to perform the search
+        return appRideService.searchRides(origin, destination, data);
+    }
+
     @GetMapping(value = "/rides")
     public List<AppRide> rideList() {
         return appRideRepository.findAll();
@@ -67,9 +92,39 @@ public class RegistrationController {
     } else {
         return ResponseEntity.notFound().build();
     }
+
     }
 
-    @PutMapping("users/{id}")
+@PutMapping("users/booking/{origin}/{destination}/{data}")
+public ResponseEntity<String> updateRide(
+        @PathVariable String origin,
+        @PathVariable String destination,
+        @PathVariable String data,
+        @RequestBody AppRide updatedRide
+) {
+    try {
+        List<AppRide> ridesToUpdate = appRideService.searchRides(origin, destination, data);
+
+        if (!ridesToUpdate.isEmpty()) {
+            for (AppRide existingRide : ridesToUpdate) {
+                existingRide.setUser_passanger(updatedRide.getUser_passanger());
+                existingRide.setNumber_seats(updatedRide.getNumber_seats());
+            }
+
+            // Save the updated rides
+            appRideRepository.saveAll(ridesToUpdate);
+
+            return ResponseEntity.ok("User passenger updated successfully for the specified ride criteria.");
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    } catch (Exception e) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body("Error updating user passenger for ride: " + e.getMessage());
+    }
+}
+
+    @PutMapping("/users/{id}")
     public ResponseEntity<String> updateUser(@PathVariable long id, @RequestBody AppUser user) {
     try {
         Optional<AppUser> optionalUser = appUserRepository.findById(id);

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -14,23 +15,32 @@ public class AppRideService {
     private AppRideRepository appRideRepository;
 
     @Transactional
-    public String insertAppRide(String origin,
+    public String insertAppRide(Long user_id,
+                                Long user_passanger,
+                                String origin,
                                 String destination,
                                 String distance,
                                 String time
-                             //   ,String number_seats
-                             //   ,String data
+                                ,int number_seats
+                                ,String data
     ) {
         AppRide newRide = new AppRide();
+        newRide.setUser_id(user_id);
+        newRide.setUser_passanger(user_passanger);
         newRide.setOrigin(origin);
         newRide.setDestination(destination);
         newRide.setDistance(distance);
         newRide.setTime(time);
-       // newRide.setNumber_seats(number_seats);
-       // newRide.setData(data);
+        newRide.setNumber_seats(number_seats);
+        newRide.setData(data);
 
         appRideRepository.save(newRide);
         return origin;
+    }
+
+    public List<AppRide> searchRides(String origin, String destination, String data) {
+        // Assuming you have a method in the repository to perform the search
+        return appRideRepository.findByOriginAndDestinationAndData(origin, destination, data);
     }
 }
 

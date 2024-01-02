@@ -8,10 +8,12 @@ import lombok.ToString;
 @EqualsAndHashCode
 @ToString
 public class RegistrationRequest {
-
+    private final Long user_id;
+    private final Long user_passanger;
     private final String origin;
     private final String distance;
     private final String destination;
+    private final String data;
     private final String time;
     private final String firstName;
     private final String lastName;
@@ -20,5 +22,8 @@ public class RegistrationRequest {
     private final int year;
     private final int month;
     private final int day;
+
+    public int number_seats;
+
 
 }
