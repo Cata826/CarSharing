@@ -8,6 +8,11 @@ import lombok.ToString;
 @EqualsAndHashCode
 @ToString
 public class RegistrationRequest {
+
+    private final String origin;
+    private final String distance;
+    private final String destination;
+    private final String time;
     private final String firstName;
     private final String lastName;
     private final String email;

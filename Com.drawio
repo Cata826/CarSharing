@@ -1,0 +1,196 @@
+<mxfile host="app.diagrams.net" modified="2023-12-09T14:59:25.455Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="jKG3ROBDtW3ytExTl3HI" version="22.1.7" type="device">
+  <diagram name="Page-1" id="vWeIw0WbyGgt-IcdYvRp">
+    <mxGraphModel dx="1626" dy="785" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7gtiakLkaSCmGs2BbBta-1" value=": User" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="229.5" as="sourcePoint" />
+            <mxPoint x="350" y="229.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-5" value="1: request to register" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7gtiakLkaSCmGs2BbBta-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-10" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-3" value=": RideSharing" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="220" as="sourcePoint" />
+            <mxPoint x="320" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-7" value=": Login" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="320" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-10" value=": Registration" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="320" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-11" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="7gtiakLkaSCmGs2BbBta-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="354" y="310" as="sourcePoint" />
+            <mxPoint x="404" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-12" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="7gtiakLkaSCmGs2BbBta-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="466" y="310" as="sourcePoint" />
+            <mxPoint x="420" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-13" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="7gtiakLkaSCmGs2BbBta-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="350" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-14" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="360" as="sourcePoint" />
+            <mxPoint x="400" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-15" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="132.5" y="240" as="sourcePoint" />
+            <mxPoint x="167.5" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-16" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="315" y="360" as="sourcePoint" />
+            <mxPoint x="365" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-17" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="475" y="360" as="sourcePoint" />
+            <mxPoint x="525" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-18" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="240" as="sourcePoint" />
+            <mxPoint x="450" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-19" value=": Create/Book a ride" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-20" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.017;entryY=0.65;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="474" y="230.5" as="sourcePoint" />
+            <mxPoint x="577.96" y="229.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="230.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-21" value="2: all&amp;nbsp; fields&lt;br&gt;&amp;nbsp;complete" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="490" y="180" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-22" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="220" as="sourcePoint" />
+            <mxPoint x="570" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-23" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="520" as="sourcePoint" />
+            <mxPoint x="500" y="470" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="430" y="520" />
+              <mxPoint x="400" y="500" />
+              <mxPoint x="410" y="470" />
+              <mxPoint x="430" y="450" />
+              <mxPoint x="460" y="450" />
+              <mxPoint x="490" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-24" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="520" as="sourcePoint" />
+            <mxPoint x="500" y="468" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="480" y="518" />
+              <mxPoint x="500" y="498" />
+              <mxPoint x="500" y="488" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-25" value="RIdeSharing" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="410" y="468" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-26" value="Client" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="450" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-27" value="Driver" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="510" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-28" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="468" as="sourcePoint" />
+            <mxPoint x="400" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-29" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="530" as="sourcePoint" />
+            <mxPoint x="400" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-30" value="Login" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="350" y="510" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-31" value="Login" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="340" y="450" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-32" value="informations about thecar" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="393" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-33" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.989;exitY=0.033;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="7gtiakLkaSCmGs2BbBta-25" target="7gtiakLkaSCmGs2BbBta-32">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="500" as="sourcePoint" />
+            <mxPoint x="590" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-34" value="info about the leaving/arriving time" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="498" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-35" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1" source="7gtiakLkaSCmGs2BbBta-34">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="548" as="sourcePoint" />
+            <mxPoint x="500" y="498" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-36" value="Mapped choice of staring/end point" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="600" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-38" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1" target="7gtiakLkaSCmGs2BbBta-36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="510" as="sourcePoint" />
+            <mxPoint x="560" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-39" value="create/book &lt;br&gt;a ride" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="490" y="410" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-40" value="create/book &lt;br&gt;a ride" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="510" y="468" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7gtiakLkaSCmGs2BbBta-41" value="create/book &lt;br&gt;a ride" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="510" y="528" width="90" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
