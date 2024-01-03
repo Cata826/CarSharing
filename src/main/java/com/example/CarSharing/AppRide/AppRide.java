@@ -22,19 +22,38 @@ public class AppRide {
             generator = "ride_sequence"
     )
     private Long id;
+    private Long user_id;
+
+    public Long getUser_passanger() {
+        return user_passanger;
+    }
+
+    public void setUser_passanger(Long user_passanger) {
+        this.user_passanger = user_passanger;
+    }
+
+    private Long user_passanger;
     private String origin;
     private String destination;
     private String distance;
     private String time;
-    private String number_seats;
+    private int number_seats;
     private String data;
 
-    public String getNumber_seats() {
+    public int getNumber_seats() {
         return number_seats;
     }
 
-    public void setNumber_seats(String number_seats) {
+    public void setNumber_seats(int number_seats) {
         this.number_seats = number_seats;
+    }
+
+    public Long getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Long user_id) {
+        this.user_id = user_id;
     }
 
     public String getData() {
