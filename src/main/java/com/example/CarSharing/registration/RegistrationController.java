@@ -49,9 +49,9 @@ public class RegistrationController {
 
     @PostMapping("/createride")
     public String registerRide(@RequestBody RegistrationRequest request) {
-        // Assuming RegistrationRequest contains origin, destination, distance, and time
-        return appRideService.insertAppRide(request.getUser_id(), request.getUser_passanger(), request.getOrigin(), request.getDestination(),
-                request.getDistance(), request.getTime(),request.getNumber_seats(),request.getData());
+        return appRideService.insertAppRide(request.getUser_id(), request.getUser_passanger(), request.getOrigin(),
+                request.getDestination(), request.getDistance(), request.getTime(),request.getNumber_seats(),
+                request.getData());
     }
 
     @GetMapping("/searchride")
@@ -60,9 +60,7 @@ public class RegistrationController {
             @RequestParam String destination,
             @RequestParam String data
 
-
     ) {
-        // Assuming you have a method in AppRideService to perform the search
         return appRideService.searchRides(origin, destination, data);
     }
 
@@ -72,7 +70,7 @@ public class RegistrationController {
     }
     @GetMapping(value = "/users")
     public List<AppUser> userList() {
-        return appUserRepository.findAll();
+        return (List<AppUser>) appUserRepository.findAll();
     }
     @GetMapping(value = "/users/{id}")
     public Optional<AppUser> getUserById(@PathVariable Long id) {
@@ -123,7 +121,38 @@ public ResponseEntity<String> updateRide(
                 .body("Error updating user passenger for ride: " + e.getMessage());
     }
 }
+    @GetMapping("/findRidebyID/{id}")
+    public ResponseEntity<AppRide> findUserById(@PathVariable Long id) {
+        Optional<AppRide> optionalUser = appRideRepository.findById(id);
 
+        return optionalUser.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+    @GetMapping("/userPassanger/{id}")
+    public ResponseEntity<Integer> findPassanger(@PathVariable Long id) {
+        Optional<AppRide> optionalUser = appRideRepository.findById(id);
+
+        if (optionalUser.isPresent()) {
+            AppRide user = optionalUser.get();
+            int userPassenger = Math.toIntExact(user.getUser_passanger());
+
+            return ResponseEntity.ok( userPassenger);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+    @GetMapping("/userID/{id}")
+    public ResponseEntity<Integer> findDriver(@PathVariable Long id) {
+        Optional<AppRide> optionalUser = appRideRepository.findById(id);
+
+        if (optionalUser.isPresent()) {
+            AppRide user = optionalUser.get();
+            int user_id = Math.toIntExact(user.getUser_id());
+
+            return ResponseEntity.ok( user_id);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
     @PutMapping("/users/{id}")
     public ResponseEntity<String> updateUser(@PathVariable long id, @RequestBody AppUser user) {
     try {
@@ -132,11 +161,12 @@ public ResponseEntity<String> updateRide(
         if (optionalUser.isPresent()) {
             AppUser existingUser = optionalUser.get();
             existingUser.setPhone_number(user.getPhone_number());
+            existingUser.setFirstname(user.getFirstName());
+            existingUser.setLastname(user.getLastName());
             existingUser.setYear(user.getYear());
             existingUser.setMonth(user.getMonth());
             existingUser.setDay(user.getDay());
-            existingUser.setFirstname(user.getFirstName());
-            existingUser.setLastname(user.getLastName());
+
 
             appUserRepository.save(existingUser);
             return ResponseEntity.ok("User updated successfully");

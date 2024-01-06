@@ -39,7 +39,6 @@ public class AppRideService {
     }
 
     public List<AppRide> searchRides(String origin, String destination, String data) {
-        // Assuming you have a method in the repository to perform the search
         return appRideRepository.findByOriginAndDestinationAndData(origin, destination, data);
     }
 }

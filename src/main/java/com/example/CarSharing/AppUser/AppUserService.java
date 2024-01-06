@@ -29,6 +29,10 @@ public class AppUserService implements UserDetailsService {
                         new UsernameNotFoundException(
                                 String.format(USER_NOT_FOUND_MSG, email)));
     }
+//    public String changePassword(AppUser appUser)
+//    {
+//        boolean userExists=appUserRepository.
+//    }
 
     public String signUpUser(AppUser appUser) {
         boolean userExists = appUserRepository

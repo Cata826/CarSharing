@@ -2,6 +2,9 @@ package com.example.CarSharing.Chat;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 // ... other imports ...
@@ -20,6 +23,19 @@ public class MessageService {
     }
 
     public List<Message> getAllMessages(int receiverId, int senderID) {
-        return messageRepository.findAllMessages(receiverId, senderID);
+        List<Message> sentMessages = messageRepository.findAllMessages(receiverId,senderID);
+        List<Message> receivedMessages = messageRepository.findAllMessages(senderID,receiverId);
+        List<Message> allMessages = new ArrayList<>(sentMessages);
+        allMessages.addAll(receivedMessages);
+        Collections.sort(allMessages, new Comparator<Message>() {
+            @Override
+            public int compare(Message m1, Message m2) {
+                return m1.getSendTime().compareTo(m2.getSendTime());
+            }
+        });
+        return allMessages;
     }
+
+
+
 }

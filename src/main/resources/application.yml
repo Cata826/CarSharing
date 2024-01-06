@@ -4,7 +4,7 @@ server:
     include-binding-errors: always
 spring:
   datasource:
-    password: FilipCristian21
+    password: catalin1234
     url: jdbc:mysql://localhost:3306/registration
     username: root
   jpa:
