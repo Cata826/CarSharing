@@ -40,7 +40,7 @@ GoogleApp.propTypes = {
 
   function GoogleApp({userId }) { 
     const { isLoaded } = useJsApiLoader({
-      googleMapsApiKey:'AIzaSyAqXzKM6-7YLh8Od_xVE21-5Ua2yxQQj0U',
+      googleMapsApiKey:'**********************8',
       libraries: ['places'],
     })
    
