@@ -1,0 +1,78 @@
+/* Calendar.css */
+
+.calendar {
+  font-family: 'Arial', sans-serif;
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 8px 8px 0 0;
+}
+
+.calendar-header button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.calendar-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.day-label {
+  text-align: center;
+}
+
+.calendar-cells {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  padding: 10px;
+}
+
+.day-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  cursor: pointer;
+}
+
+.day-cell.disabled {
+  color: #ccc;
+}
+
+.day-cell.today {
+  background-color: #ffe8e8;
+}
+
+.clicked-date {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.clicked-date p {
+  margin: 0;
+}

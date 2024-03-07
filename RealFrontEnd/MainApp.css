@@ -1,0 +1,109 @@
+/* .MainApp {
+    background-image: url(background-login-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+  }
+  
+  .InfoForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+  }
+  h1 {
+    text-align: center;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  } */
+  
+  .MainApp {
+    background-image: url("background-login-page.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 70px;
+  }
+  .InfoForm {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 25px; /* Adjusted to match the margin-top in LoginForm */
+    background: #101111; /* Match the background color of LoginForm */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* Match the text color of LoginForm */
+  }
+  
+  .InfoForm h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .InfoForm .input-box {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+  }
+  
+  .InfoForm .input-box input {
+    width: 100%;
+    height: 40px;
+    background: transparent; /* Match the input background of LoginForm */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .InfoForm .input-box input::placeholder {
+    color: #fff;
+  }
+  
+  .InfoForm .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+ 
+  /* .MainApp{
+    background-image: url(background-login-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} */

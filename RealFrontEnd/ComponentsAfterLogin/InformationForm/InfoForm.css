@@ -1,0 +1,53 @@
+.InfoForm {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 25px; 
+  background: #101111; 
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #fff; 
+}
+
+.InfoForm h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.InfoForm .input-box {
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+
+.InfoForm .input-box input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.InfoForm .input-box input::placeholder {
+  color: #fff;
+}
+
+.InfoForm .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  color: #333;
+  font-weight: 600;
+}

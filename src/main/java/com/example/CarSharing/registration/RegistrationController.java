@@ -109,7 +109,6 @@ public ResponseEntity<String> updateRide(
                 existingRide.setNumber_seats(updatedRide.getNumber_seats());
             }
 
-            // Save the updated rides
             appRideRepository.saveAll(ridesToUpdate);
 
             return ResponseEntity.ok("User passenger updated successfully for the specified ride criteria.");
@@ -151,6 +150,24 @@ public ResponseEntity<String> updateRide(
             return ResponseEntity.ok( user_id);
         } else {
             return ResponseEntity.notFound().build();
+        }
+    }
+    @PutMapping("/pass/{id}")
+    public ResponseEntity<String> changePassword(@PathVariable long id, @RequestBody AppUser user) {
+        try {
+            Optional<AppUser> optionalUser = appUserRepository.findById(id);
+
+            if (optionalUser.isPresent()) {
+                AppUser existingUser = optionalUser.get();
+                existingUser.setPassword(user.getPassword());
+
+                appUserRepository.save(existingUser);
+                return ResponseEntity.ok("User updated successfully");
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error updating user: " + e.getMessage());
         }
     }
     @PutMapping("/users/{id}")

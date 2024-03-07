@@ -1,0 +1,24 @@
+
+
+/* Set a maximum height for the table container */
+.ride-list-container {
+    max-height: 70vh; /* Adjust the percentage as needed */
+    overflow-y: auto; /* Add a scrollbar when the content overflows */
+  }
+  
+  /* Style the table headers */
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style the table rows */
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Style the table cells */
+  td, th {
+    padding: 12px;
+    text-align: left;
+  }
+  

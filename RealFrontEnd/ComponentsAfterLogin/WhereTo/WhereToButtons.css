@@ -1,0 +1,14 @@
+.TwoButtons {
+  margin-top: 350px;
+  margin-left: 625px;
+  display: flex;
+}
+
+.whiteButton {
+  width: 150px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-right: 10px;
+}
