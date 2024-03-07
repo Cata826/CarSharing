@@ -17,7 +17,10 @@
   Validare prin Email (MailDev): Asigurarea autenticității conturilor prin validare prin email, gestionată eficient cu MailDev
 
 
-![Read1](C:/Users/balin/OneDrive/Desktop/Documente/Downloads/read1.jpg)
-![Read2](C:/Users/balin/OneDrive/Desktop/Documente/Downloads/read2.jpg)
-![Read3](C:/Users/balin/OneDrive/Desktop/Documente/Downloads/read3.jpg)
-![Read4](C:/Users/balin/OneDrive/Desktop/Documente/Downloads/read4.jpg)
+![Read1](file:///C:/Users/balin/OneDrive/Desktop/Documente/Downloads/read1.jpg)
+
+![Read2](file:///C:/Users/balin/OneDrive/Desktop/Documente/Downloads/read2.jpg)
+
+![Read3](file:///C:/Users/balin/OneDrive/Desktop/Documente/Downloads/read3.jpg)
+
+![Read4](file:///C:/Users/balin/OneDrive/Desktop/Documente/Downloads/read4.jpg)
