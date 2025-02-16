@@ -1,18 +1,19 @@
-  Ride Sharing App este o aplicație inovatoare dezvoltată pentru a simplifica și îmbunătăți experiența călătoriilor urbane. Bazată pe tehnologii avansateprecum Spring Java pentru backend și React pentru frontend, această platformă oferă o soluție completă și eficientă pentru împărțirea curselor și conexiunilerapide între conducătorii auto și pasageri.
+# Ride Sharing App
 
-  Caracteristici Cheie
-  Sistem de Autentificare Sigur: Asigură securitatea utilizatorilor prin implementarea unui sistem de autentificare robust, inclusiv validarea prin email pentru conturi autentice și securizate.
+## Overview
+Ride Sharing App is an innovative application developed to simplify and enhance the urban travel experience. Built on advanced technologies such as Spring Java for the backend and React for the frontend, this platform offers a comprehensive and efficient solution for ride-sharing and quick connections between drivers and passengers.
 
-  Hartă Interactivă: Utilizează Google API pentru a oferi o hartă interactivă care facilitează căutarea și vizualizarea curselor disponibile în funcție de criterii precum locația de plecare, destinația și orarul dorit.
+## Key Features
+- **Secure Authentication System**: Ensures user security with a robust authentication system, including email validation for secure and authentic accounts.
+- **Interactive Map**: Utilizes Google API to provide an interactive map that facilitates the search and display of available rides based on criteria like departure location, destination, and desired schedule.
+- **Ride Creation and Booking**: Users can easily initiate or join existing rides, specifying details such as place of departure, destination, date, and time.
+- **Account Customization**: Allows users to customize their account details, including personal information and ride preferences.
 
-  Creare și Rezervare Cursă: Utilizatorii au posibilitatea de a iniția sau se alătura cu ușurință curselor existente, specificând detaliile precum locul de plecare, destinația, data și ora dorită.
+## Technologies Used
+- **Backend (Spring Java)**: Manages user security, database interactions with MySQL, and data handling through Spring Data JPA.
+- **Frontend (React)**: Develops a responsive and attractive interface, integrates Google API for the interactive map, and manages logic with JavaScript.
+- **Email Validation (MailDev)**: Ensures account authenticity with email validation, efficiently managed with MailDev.
 
-  Personalizare Cont: Oferă utilizatorilor opțiunea de a personaliza detaliile contului, inclusiv informații personale și preferințe legate de curse.
-
-  Tehnologii Utilizate
-  Backend (Spring Java): Implementarea securității utilizatorilor, interacțiunea cu baza de date MySQL, și gestionarea datelor prin Spring Data JPA.
-
-  Frontend (React): Construirea unei interfețe responsive și atrăgătoare, integrarea Google API pentru harta interactivă, și gestionarea logică cu JavaScript.
-
-  Validare prin Email (MailDev): Asigurarea autenticității conturilor prin validare prin email, gestionată eficient cu MailDev
-
+## Screenshots
+![Google API Integration](qqq.png)  
+*Interactive map powered by Google API.*
